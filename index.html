@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>축구 게임 사이트</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="top-bar">
+      <div class="top-right">
+        <a href="#">회원가입</a> | 
+        <a href="#">로그인</a> | 
+        <a href="#">고객센터</a>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="logo">
+        <img src="https://logoeps.com/wp-content/uploads/2025/02/EA_Sports_FC_25-logo.png" alt="fc25" style="height:120px;">
+        <span id="game" class="active" onclick="switchTab('game')">게임</span>
+        <span id="league" onclick="switchTab('league')">리그</span>
+        <span id="ranking" onclick="switchTab('ranking')">랭킹</span>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="선수/팀 검색"/>
+        <button><img src="https://cdn-icons-png.flaticon.com/512/149/149852.png" alt="search"></button>
+      </div>
+      <div class="icons">
+        <img src="https://cdn-icons-png.flaticon.com/512/2910/2910763.png" alt="지도">
+        <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="즐겨찾기">
+        <img src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png" alt="장바구니">
+      </div>
+    </div>
+
+    <div class="nav-bar">
+      <div class="menu">
+        <button class="hamburger">☰</button>
+        <span>카테고리</span>
+      </div>
+      <div class="nav-links">
+        <a href="#">신규 경기</a>
+        <a href="#">인기 모드</a>
+        <a href="tournament.html">토너먼트</a>
+        <a href="#">선수 정보</a>
+        <a href="#">이벤트</a>
+      </div>
+
+      <div class="delivery-info">
+        <button class="start-btn" onclick="startGame()">게임 시작</button>
+      </div>
+
+      <!-- 🎬 유튜브 영상 iframe -->
+      <div class="game-video">
+        <iframe id="introVideo" width="100%" height="100%" 
+          src="https://www.youtube.com/embed/vwY1evaaxHs?autoplay=0&controls=0&rel=0&modestbranding=1" 
+          frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      </div>
+  </header>
+
+    <!-- 피파 강화 섹션 -->
+     <section class="fifa-enhance">
+      <div class=""></div> <!-- 뒷 배경 이미지 -->
+
+  <h3>⚽ 피파 강화</h3>
+  <div class="enhance-card">
+    <div class="card-container">
+      <img id="playerCard" src="https://staticg.sportskeeda.com/editor/2024/08/d9269-17247029327596-1920.jpg" alt="선수 카드">
+      <div id="levelText" class="level-text">+0</div>
+      <div id="enhanceExplosion" class="enhance-explosion"></div>
+    </div>
+  </div>
+  <button id="enhanceBtn">강화 시도</button>
+  <p id="result"></p>
+</section>
+
+
+  <!-- ✅ 슬라이더 -->
+  <section class="banner">
+    <div class="banner-wrapper">
+      <img src="https://cdn.ipnn.co.kr/news/photo/202404/409370_58765_1359.jpg" alt="배너1">
+      <img src="https://cdn.daily.hankooki.com/news/photo/202311/1015969_1254003_5741.jpg" alt="배너2">
+      <img src="https://i.ytimg.com/vi/j8rh4W3gPAI/maxresdefault.jpg" alt="배너3">
+      <img src="https://cdn.apnews.kr/news/photo/202310/3012954_34751_5644.png" alt="배너4">
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="special">
+      <h2>✨ 최신 경기 모드!</h2>
+      <div class="product-list">
+        <div class="product">
+          <img src="https://i.namu.wiki/i/CjTKCB4K2cj3ANtNXM1dO9Gklax8eNeMHmTmVmYdPrEYXt8F9DdDx9PMTc_nUIjflVhvRQ8VUi2bRa-ih-SnmA.webp" alt="모드1">
+          <p>북중미 월드컵 모드</p>
+        </div>
+        <div class="product">
+          <img src="https://play-lh.googleusercontent.com/fSLe25GAMtXauJhBJxO0TrN_oX7AdmNqsrz9VPdmtwYCqvbP4M9VtN0VzJV0ABDhsBo" alt="모드2">
+          <p>챔피언스 리그 모드</p>
+        </div>
+        <div class="product">
+          <img src="https://theseedwikifile.theseed.io/dd/ddb16e6be871bc1648c0228d898bc68ff09c7219cd8027f32e27f318da40a2fd.webp" alt="모드3">
+          <p>유로파 리그 모드</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="popular">
+      <h2>🔥 인기 선수 카드!</h2>
+      <div class="product-list">
+        <div class="product">
+          <img src="https://staticg.sportskeeda.com/editor/2024/08/d9269-17247029327596-1920.jpg" alt="선수1">
+          <p>리오넬 메시</p>
+        </div>
+        <div class="product">
+          <img src="https://staticg.sportskeeda.com/editor/2024/09/c72fe-17268359290862-1920.jpg" alt="선수2">
+          <p>크리스티아누 호날두</p>
+        </div>
+        <div class="product">
+          <img src="https://staticg.sportskeeda.com/editor/2024/09/15183-17259018960649-1920.jpg" alt="선수3">
+          <p>엘링 홀란드</p>
+        </div>
+        <div class="product">
+          <img src="https://staticg.sportskeeda.com/editor/2024/09/433ea-17269051109040-1920.jpg" alt="선수4">
+          <p>킬리안 음바페</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-logo">
+        <img src="https://logoeps.com/wp-content/uploads/2025/02/EA_Sports_FC_25-logo.png" alt="fc25" style="height:120px;">
+    <p>© 2025 Soccer Game. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

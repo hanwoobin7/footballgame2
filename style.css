@@ -1,0 +1,532 @@
+body {
+  margin: 0;
+  font-family: 'Pretendard', sans-serif;
+  background-color: #faf8ff;
+  color: #333;
+}
+
+/* 상단 바 */
+.top-bar {
+  background: #f9f9f9;
+  padding: 8px 16px;
+  text-align: right;
+  font-size: 14px;
+  color: #666;
+}
+.top-bar a {
+  color: #555;
+  text-decoration: none;
+  margin-left: 10px;
+  font-weight: 500;
+}
+.top-bar a:hover {
+  color: #00ff5e;
+}
+
+/* 헤더 */
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  border-bottom: 1px solid #eee;
+}
+.logo span {
+  margin-right: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+.logo span.active {
+  color: #00ff5e;
+}
+
+/* 검색창 */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.search-bar input {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid white;
+  width: 300px;
+}
+.search-bar button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.search-bar img {
+  width: 20px;
+}
+.icons img {
+  width: 26px;
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+/* 네비게이션 */
+.nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00ff5e;
+  color: black;
+  padding: 10px 40px;
+}
+.nav-links a {
+  color: black;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.hamburger {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+}
+.delivery-info button {
+  background: black;
+  color: #00ff5e;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 15px;
+  cursor: pointer;
+
+}
+
+.delivery-info {
+  position: relative; /* 위치 기준 설정 */
+  left: -70px; /* 왼쪽으로 20px 이동 */
+  margin-left: 50px;
+
+}
+
+
+
+/* ✅ 슬라이더 */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+}
+.banner-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+  object-fit: cover;
+}
+.banner-wrapper img {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  object-fit: cover; /* cover → contain */
+  object-position: top center;
+  display: block;
+  background-color: black; /* 남는 공간 채우기 옵션 */
+}
+
+
+/* 콘텐츠 */
+main {
+  padding: 40px 60px;
+}
+section h2 {
+  text-align: center;
+  color: #00ff5e;
+}
+.product-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+.product {
+  background: white;
+  border-radius: 15px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.product:hover {
+  transform: translateY(-5px);
+}
+.product img {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+
+/* 푸터 */
+footer {
+  background: #00ff5e;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  font-size: 14px;
+}
+
+#footer-logo {
+  display: flex;
+}
+
+.start-btn {
+  background: linear-gradient(90deg, #00ff5e, #00b8ff);
+  color: #000;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  padding: 14px 36px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 255, 150, 0.5);
+}
+
+.start-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.8);
+}
+
+.start-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.game-video {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: 999;
+}
+
+#introVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.tournament {
+  padding: 40px 60px;
+  text-align: center;
+}
+
+.bracket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.round {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.match {
+  background: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-weight: 600;
+}
+
+.match span {
+  margin-left: 10px;
+  font-weight: bold;
+  color: #00ff5e;
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.team-card {
+  background: #fff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-weight: 600;
+  transition: transform 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+
+.content-background {
+  background-image: url('https://previews.123rf.com/images/iunewind/iunewind2206/iunewind220600304/187860483-uefa-champions-league-flag-full-screen-background-silk-farbric-close-up-waving-in-the-wind.jpg'); /* 배경 이미지 URL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; /* 필요 시 오버레이 사용 가능 */
+}
+
+.tournament h2 {
+  color: #00ff5e; /* 토너먼트 모드 제목 */
+  text-align: center;
+}
+
+.bracket h3,
+.team-list h3 {
+  color: #00ff5e; /* 초록색 */
+  margin-bottom: 15px;
+}
+
+.fifa-enhance {
+  text-align: center;
+  margin: 40px 0;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.fifa-enhance h3 {
+  color: #00ff5e;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+#enhanceBtn {
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, #00ff5e, #00b8ff);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#enhanceBtn:hover {
+  transform: scale(1.08);
+}
+
+#result {
+  font-size: 22px;
+  margin-top: 15px;
+  color: white;
+}
+
+.fifa-enhance {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.enhance-card img {
+  width: 250px;
+  transition: all 0.4s ease;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 94, 0.3);
+}
+
+/* 성공 이펙트 */
+.success-effect {
+  animation: glow 1s ease-in-out;
+  box-shadow: 0 0 40px rgba(0, 255, 94, 0.9);
+}
+
+/* 실패 이펙트 */
+.fail-effect {
+  animation: shake 0.4s ease-in-out;
+  filter: grayscale(100%);
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.7);
+}
+
+@keyframes glow {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}
+.fifa-enhance {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.card-container {
+  position: relative;
+  display: inline-block;
+}
+
+#playerCard {
+  width: 300px;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.level-text {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #00ff66;
+  text-shadow: 0 0 10px black;
+}
+
+/* 💥 폭발 이펙트 */
+.enhance-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,0,0.9), rgba(255,0,0,0.2), transparent 70%);
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+@keyframes explode {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(5);
+    opacity: 0;
+  }
+}
+
+/* ✨ 카드가 흔들리는 효과 */
+@keyframes shake {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(-2deg); }
+  75% { transform: rotate(2deg); }
+}
+
+.card-container {
+  position: relative;
+  display: inline-block;
+}
+
+#playerCard {
+  width: 300px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.level-text {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #00ff66;
+  text-shadow: 0 0 10px black;
+}
+
+/* 카드 상승 + 공중 흔들림 */
+@keyframes jumpShake {
+  0%   { transform: translateY(0) rotate(0deg); }
+  50%  { transform: translateY(-180px) rotate(0deg); }
+  60%  { transform: translateY(-180px) rotate(-5deg); }
+  70%  { transform: translateY(-180px) rotate(5deg); }
+  80%  { transform: translateY(-180px) rotate(-4deg); }
+  90%  { transform: translateY(-180px) rotate(4deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* 카드 성공 착지 + 반짝 */
+@keyframes landSuccess {
+  0%   { transform: translateY(-180px) scale(1); filter: brightness(1); }
+  50%  { transform: translateY(-20px) scale(1.05); filter: brightness(2); }
+  100% { transform: translateY(0) scale(1); filter: brightness(1); }
+}
+
+/* 카드 흔들기 */
+@keyframes shake {
+  0%,100% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(-2deg); }
+  75% { transform: rotate(2deg); }
+}
+
+/* 실패 폭발 */
+@keyframes blackExplosion {
+  0% {
+    transform: translate(-50%, -50%) scale(0.3);
+    box-shadow: 0 0 30px 10px #000, 0 0 60px 40px #222;
+    opacity: 1;
+  }
+  40% {
+    transform: translate(-50%, -50%) scale(3);
+    box-shadow: 0 0 80px 50px #111, 0 0 120px 80px #333;
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(6);
+    opacity: 0;
+  }
+}
+
+.enhance-explosion {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* 연기 입자 */
+@keyframes smoke {
+  0% { transform: translate(0,0) scale(0.8); opacity:1; }
+  100% { transform: translate(var(--x), var(--y)) scale(2); opacity:0; }
+}
+
+
+
+
